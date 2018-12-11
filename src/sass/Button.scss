@@ -1,0 +1,15 @@
+.button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.button:hover {
+  background: grey;
+  color: white;
+}
+
+.button:active {
+  background: darkblue;
+  color: white;
+}

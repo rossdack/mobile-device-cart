@@ -1,0 +1,46 @@
+@import 'fonts';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 5px;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  min-width: 150px;
+
+  .product-name {
+
+  }
+  .product-image-container {
+    .product-image {
+      margin-top: 10px;
+      width: 100px;
+    }
+
+  }
+
+  .product-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .price-unit {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+    .price-value {
+      font-size: 44px;
+      font-family: gravur;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.product:hover {
+  background-color: #efefef;
+}
