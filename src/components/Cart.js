@@ -15,7 +15,6 @@ class Cart extends React.Component {
      * @param product
      */
     removeFromCart = (e, product) => {
-        console.log('removing from cart', product.productName);
         this.props.removeProductFromCart(product);
         this.props.reinstateProductToList(product);
     };
@@ -41,14 +40,15 @@ class Cart extends React.Component {
     }
 
     render() {
+        const totalPrice = `Total Price: $${this.props.cart.total}`;
         return (
-            <section className='cart-container'>
+            <section className='cart-container' title='Shopping Cart'>
                 <div className='cart-content-wrapper'>
                     <div className='cart-header'>Shopping Cart</div>
                     <div className='cart-selected-items'>
                         {this.renderCartItems()}
                     </div>
-                    <div className='cart-footer'>Total Price: ${this.props.cart.total}</div>
+                    <div className='cart-footer' title={totalPrice}>Total Price: ${this.props.cart.total}</div>
                 </div>
             </section>
         );

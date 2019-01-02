@@ -9,7 +9,6 @@ import {removeFromProducts} from '../actions/productActions';
 class SelfCareContainer extends React.Component {
 
     addToCart = selection => {
-        console.log('add to cart', selection.product.productName);
         this.props.removeFromProducts(selection.product);
         this.props.addProductToCart(selection.product);
     };

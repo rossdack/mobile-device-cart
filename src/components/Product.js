@@ -8,9 +8,10 @@ import PropTypes from 'prop-types';
  */
 const Product = props => {
     const {product, buttonAction} = props;
+    const alternativeText = `Add ${product.productName} to cart`;
 
     return (
-        <section className='product'>
+        <section className='product' title={product.productName}>
             <div className='product-name'>{product.productName}</div>
             <div className='product-image-container'>
                 <img src={product.productImage} className='product-image' title={product.productName} alt={product.productName}/>
@@ -20,7 +21,7 @@ const Product = props => {
                 <div className='price-value'>{product.price}</div>
             </div>
             <div className='button-container'>
-                <Button title={'Add to Cart'} onClick={(e) => buttonAction(e, {product})}/>
+                <Button title={'Add to Cart'} altText={alternativeText} onClick={(e) => buttonAction(e, {product})}/>
             </div>
         </section>
     )
