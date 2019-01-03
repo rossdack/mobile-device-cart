@@ -15,7 +15,7 @@ class SelfCareContainer extends React.Component {
 
     render() {
         return (
-            <article className='selfcare-container'>
+            <article role='main' className='selfcare-container'>
                 <div className='selfcare-content'>
                     <div className='product-list-wrapper'>
                         <ProductList addToCart={this.addToCart}/>
